@@ -1,3 +1,5 @@
+import "./Shop.css";
+
 function Shop() {
   return <div className="shop"></div>;
 }

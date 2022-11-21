@@ -1,0 +1,46 @@
+.nav-bar {
+  background-color: white;
+
+  color: #bd141b;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: Transformers, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+
+  padding: 0.5rem 0;
+}
+
+.nav-bar .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-bar .logo img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  height: 2rem;
+}
+
+.nav-bar .links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-bar a {
+  color: #bd141b;
+
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
