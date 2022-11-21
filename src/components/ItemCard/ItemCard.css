@@ -1,0 +1,21 @@
+.item-card {
+  border-color: #bd141b;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+
+  color: #bd141b;
+
+  font-family: Transformers;
+
+  height: 20rem;
+
+  width: 20rem;
+
+
+}
+
+.item-card img {
+  max-height: 13rem;
+  max-width: 15rem;
+}
