@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -10,11 +10,14 @@ import Footer from "./components/Footer/Footer";
 function App() {
   document.title = "Shopping Cart";
 
+  const [cartItems, setCartItems] = useState(0);
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
+      <BrowserRouter basename="/shopping-cart">
+        <NavBar cartItems={cartItems} />
         <Routes>
+          {/* NEED TO FIX /shopping-cart ADDRESS ON NPM START */}
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />

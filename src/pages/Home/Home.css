@@ -1,0 +1,29 @@
+.home {
+  background-image: url("../../assets/Transformers-G1-Battle.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  place-content: center;
+}
+
+.home .enter-store {
+  background-color: rgb(255, 255, 255, 0.5);
+
+  border-color: #bd141b;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+
+  color: #bd141b;
+
+  font-family: Transformers;
+  font-size: 2rem;
+
+  padding: 0.7rem 0.5rem 0.5rem;
+}
+
+.home .enter-store:hover {
+  background-color: rgb(255, 255, 255, 1);
+}

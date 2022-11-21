@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import autobots from "../../assets/autobots-logo.png";
 import decepticon from "../../assets/decepticon-logo.svg";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <div className="nav-bar">
       <div className="logo">
@@ -14,7 +14,7 @@ function NavBar() {
       <div className="links">
         <Link to={"/"}>HOME</Link>
         <Link to={"/shop"}>SHOP</Link>
-        <Link to={"/cart"}>CART</Link>
+        <Link to={"/cart"}>CART{`(${props.cartItems})`}</Link>
       </div>
     </div>
   );
