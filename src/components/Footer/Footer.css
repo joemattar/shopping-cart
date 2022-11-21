@@ -1,0 +1,29 @@
+.footer {
+  background-color: #bd141b;
+
+  color: white;
+
+  font-family: Bauer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-size: 1rem;
+
+  padding: 0.5rem 0;
+
+  width: 100%;
+}
+
+.footer a {
+  display: grid;
+  place-content: center;
+
+  text-decoration: none;
+}
+
+.footer img {
+  height: 1rem;
+}

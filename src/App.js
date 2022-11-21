@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import Cart from "./components/Cart/Cart";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   document.title = "Shopping Cart";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
