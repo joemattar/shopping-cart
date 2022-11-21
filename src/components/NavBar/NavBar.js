@@ -4,6 +4,12 @@ import autobots from "../../assets/autobots-logo.png";
 import decepticon from "../../assets/decepticon-logo.svg";
 
 function NavBar(props) {
+  function displayNumberOfCartItems() {
+    if (props.cartItems > 0) {
+      return `(${props.cartItems})`;
+    }
+  }
+
   return (
     <div className="nav-bar">
       <div className="logo">
@@ -14,7 +20,7 @@ function NavBar(props) {
       <div className="links">
         <Link to={"/"}>HOME</Link>
         <Link to={"/shop"}>SHOP</Link>
-        <Link to={"/cart"}>CART{`(${props.cartItems})`}</Link>
+        <Link to={"/cart"}>CART{displayNumberOfCartItems()}</Link>
       </div>
     </div>
   );
