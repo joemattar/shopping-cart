@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import Home from "./components/Home/Home";
-import Shop from "./components/Shop/Shop";
-import Cart from "./components/Cart/Cart";
+import Home from "./pages/Home/Home";
+import Shop from "./pages/Shop/Shop";
+import Cart from "./pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
 function App() {
