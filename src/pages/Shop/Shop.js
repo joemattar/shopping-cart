@@ -14,6 +14,7 @@ function Shop(props) {
           key={item.id}
           id={item.id}
           urlImage={item.urlImage}
+          url={item.url}
           name={item.name}
           subgroup={item.subgroup}
           alliance={item.alliance}
