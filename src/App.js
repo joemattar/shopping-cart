@@ -11,9 +11,49 @@ function App() {
   document.title = "Shopping Cart";
 
   const [cartItems, setCartItems] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0);
+  const [cart, setCart] = useState([]);
 
-  function addToCartHandler() {
+  function isItemInCart(id) {
+    let found = false;
+    for (let item of cart) {
+      if (item.id === id) {
+        found = true;
+      }
+    }
+    return found;
+  }
+
+  function addToCartHandler(event) {
+    const targetID = Number(event.target.parentNode.getAttribute("id"));
+    console.log(targetID);
+    let newCart;
+    if (isItemInCart(targetID) === true) {
+      newCart = cart.map((item) => {
+        if (item.id === targetID) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        } else {
+          return item;
+        }
+      });
+    } else if (isItemInCart(targetID) === false) {
+      newCart = [
+        ...cart,
+        {
+          id: targetID,
+          quantity: 1,
+        },
+      ];
+    }
+    setCart(newCart);
     setCartItems(cartItems + 1);
+  }
+
+  function removeFromCartHandler() {
+    setCartItems(cartItems - 1);
   }
 
   return (
@@ -27,7 +67,10 @@ function App() {
             path="/shop"
             element={<Shop addToCartHandler={addToCartHandler} />}
           />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/cart"
+            element={<Cart cartItems={cartItems} cart={cart} />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

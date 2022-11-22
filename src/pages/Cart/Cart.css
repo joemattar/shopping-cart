@@ -1,0 +1,84 @@
+.cart {
+  background-color: aqua;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr ;
+
+}
+
+.cart > div {
+  height: 100%;
+}
+
+.cart-empty {
+  background-image: url("../../assets/megatron-angry.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+
+  grid-column: 2 / 3;
+
+  justify-self: center;
+
+  width: 100%;
+}
+
+.cart-empty-text {
+  background-color: rgb(255, 255, 255, 0.75);
+
+  border-color: #bd141b;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+
+  color: #bd141b;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  font-family: Transformers;
+  font-size: 2rem;
+
+  padding: 1rem 0;
+
+  width: 24rem;
+}
+
+.cart-empty-text img {
+  height: 100px;
+}
+
+.cart-empty .enter-store {
+  background-color: rgb(255, 255, 255, 0.75);
+
+  border-color: #bd141b;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+
+  color: #bd141b;
+
+  font-family: Transformers;
+  font-size: 2rem;
+
+  padding: 0.7rem 0rem 0.5rem;
+
+  width: 24.5rem;
+}
+
+.cart-empty .enter-store:hover {
+  background-color: rgb(255, 255, 255, 1);
+}
+
+.cart-filled {
+  background-color: palegreen;
+
+  grid-column: 2 / 3;
+
+  margin: 2rem 0;
+}
