@@ -12,6 +12,10 @@ function App() {
 
   const [cartItems, setCartItems] = useState(0);
 
+  function addToCartHandler() {
+    setCartItems(cartItems + 1);
+  }
+
   return (
     <div className="App">
       <BrowserRouter basename="/shopping-cart">
@@ -19,7 +23,10 @@ function App() {
         <Routes>
           {/* NEED TO FIX /shopping-cart ADDRESS ON NPM START */}
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route
+            path="/shop"
+            element={<Shop addToCartHandler={addToCartHandler} />}
+          />
           <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />

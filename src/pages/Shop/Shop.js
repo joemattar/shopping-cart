@@ -2,7 +2,7 @@ import "./Shop.css";
 import data from "../../assets/data";
 import ItemCard from "../../components/ItemCard/ItemCard";
 
-function Shop() {
+function Shop(props) {
   function displayItems() {
     const itemsInfoList = Object.values(data);
 
@@ -11,11 +11,14 @@ function Shop() {
     for (let item of itemsInfoList) {
       const newItemCard = (
         <ItemCard
+          key={item.id}
+          id={item.id}
           urlImage={item.urlImage}
           name={item.name}
           subgroup={item.subgroup}
           alliance={item.alliance}
           price={item.price}
+          addToCartHandler={props.addToCartHandler}
         />
       );
       itemsCardList.push(newItemCard);

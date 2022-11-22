@@ -11,16 +11,18 @@ function NavBar(props) {
   }
 
   return (
-    <div className="nav-bar">
-      <div className="logo">
-        <img src={autobots} alt="Autobots Logo" />
-        <div>TRANSFORMERS STORE</div>
-        <img src={decepticon} alt="Decepticon Logo" />
-      </div>
-      <div className="links">
-        <Link to={"/"}>HOME</Link>
-        <Link to={"/shop"}>SHOP</Link>
-        <Link to={"/cart"}>CART{displayNumberOfCartItems()}</Link>
+    <div className="nav-bar-container">
+      <div className="nav-bar">
+        <div className="logo">
+          <img src={autobots} alt="Autobots Logo" />
+          <div>TRANSFORMERS STORE</div>
+          <img src={decepticon} alt="Decepticon Logo" />
+        </div>
+        <div className="links">
+          <Link to={"/"}>HOME</Link>
+          <Link to={"/shop"}>SHOP</Link>
+          <Link to={"/cart"}>CART{displayNumberOfCartItems()}</Link>
+        </div>
       </div>
     </div>
   );
