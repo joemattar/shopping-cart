@@ -28,6 +28,12 @@ function Cart(props) {
             <div className="cart-filled-total-text">TOTAL</div>
             <div className="cart-filled-total-amount">{`${props.cartTotal} CAD`}</div>
           </div>
+          <button
+            className="enter-store checkout"
+            onClick={props.clearCartHandler}
+          >
+            CLEAR CART
+          </button>
           <button className="enter-store checkout">GO TO CHECKOUT</button>
         </div>
       );

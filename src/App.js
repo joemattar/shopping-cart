@@ -121,6 +121,11 @@ function App() {
     setCartItems(cartItems - 1);
   }
 
+  function clearCartHandler() {
+    setCart([]);
+    setCartItems(0);
+  }
+
   useEffect(() => {
     calculateTotalPrice();
   });
@@ -147,6 +152,7 @@ function App() {
                 getItemInfoFromDataHandler={getItemInfoFromDataHandler}
                 addToCartFromCartHandler={addToCartFromCartHandler}
                 removeFromCartFromCartHandler={removeFromCartFromCartHandler}
+                clearCartHandler={clearCartHandler}
               />
             }
           />

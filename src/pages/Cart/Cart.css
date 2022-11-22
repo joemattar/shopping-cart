@@ -76,7 +76,7 @@
   color: #bd141b;
 
   display: grid;
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto auto 1fr;
   justify-content: center;
   gap: 2rem;
 
