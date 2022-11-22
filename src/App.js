@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import data from "./assets/data";
 import "./App.css";
@@ -39,6 +39,15 @@ function App() {
       }
     }
     return inCart;
+  }
+
+  function calculateTotalPrice() {
+    let totalPrice = 0;
+    for (let item of cart) {
+      const itemInfo = getItemInfoFromDataHandler(item.id);
+      totalPrice += item.quantity * itemInfo.price;
+    }
+    setCartTotal(totalPrice);
   }
 
   // Method that calls the addToCartHandler method from shop
@@ -91,6 +100,10 @@ function App() {
     setCartItems(cartItems - 1);
   }
 
+  useEffect(() => {
+    calculateTotalPrice();
+  });
+
   return (
     <div className="App">
       <BrowserRouter basename="/shopping-cart">
@@ -108,8 +121,10 @@ function App() {
             element={
               <Cart
                 cartItems={cartItems}
+                cartTotal={cartTotal}
                 cart={cart}
                 getItemInfoFromDataHandler={getItemInfoFromDataHandler}
+                addToCartFromCartHandler={addToCartFromCartHandler}
               />
             }
           />

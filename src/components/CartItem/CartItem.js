@@ -8,7 +8,12 @@ function CartItem(props) {
       <div className="cart-item-price">{`${props.price} CAD`}</div>
       <button className="cart-item-remove">-</button>
       <div className="cart-item-quantity">{`x${props.quantity}`}</div>
-      <button className="cart-item-add">+</button>
+      <button
+        className="cart-item-add"
+        onClick={props.addToCartFromCartHandler}
+      >
+        +
+      </button>
       <div className="cart-item-subtotal">{`${props.subtotal} CAD`}</div>
     </div>
   );

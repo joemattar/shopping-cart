@@ -26,7 +26,7 @@ function Cart(props) {
           <div className="cart-filled-items">{displayCartItems()}</div>
           <div className="cart-filled-total">
             <div className="cart-filled-total-text">TOTAL</div>
-            <div className="cart-filled-total-amount">### CAD</div>
+            <div className="cart-filled-total-amount">{`${props.cartTotal} CAD`}</div>
           </div>
           <button className="enter-store checkout">GO TO CHECKOUT</button>
         </div>
@@ -49,6 +49,7 @@ function Cart(props) {
           quantity={item.quantity}
           price={itemInfo.price}
           subtotal={item.quantity * itemInfo.price}
+          addToCartFromCartHandler={props.addToCartFromCartHandler}
         />
       );
       cartItemsList.push(newCartItem);
