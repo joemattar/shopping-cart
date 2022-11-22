@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.c327a0bf.css",
+    "main.js": "/shopping-cart/static/js/main.0d68708d.js",
+    "static/media/Transformers-G1-Battle.jpg": "/shopping-cart/static/media/Transformers-G1-Battle.8b3174831272bfc4ae76.jpg",
+    "static/media/megatron-angry.jpg": "/shopping-cart/static/media/megatron-angry.1a90b12d0c2c55bfe8e0.jpg",
+    "static/media/autobots-logo.png": "/shopping-cart/static/media/autobots-logo.f98a9a73a3a1973f56b5.png",
+    "static/media/Transformers.ttf": "/shopping-cart/static/media/Transformers.812c15607e3e185b4525.ttf",
+    "static/media/decepticon-logo.svg": "/shopping-cart/static/media/decepticon-logo.571301b0adca9cf770eb92088131b0ab.svg",
+    "index.html": "/shopping-cart/index.html",
+    "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.d773b175e446f1d0cee50b4dc7a07cb9.svg",
+    "main.c327a0bf.css.map": "/shopping-cart/static/css/main.c327a0bf.css.map",
+    "main.0d68708d.js.map": "/shopping-cart/static/js/main.0d68708d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c327a0bf.css",
+    "static/js/main.0d68708d.js"
+  ]
+}
