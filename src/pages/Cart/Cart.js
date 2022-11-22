@@ -1,7 +1,9 @@
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import shoppingCartImg from "../../assets/shopping-cart.svg";
+import CartItem from "../../components/CartItem/CartItem";
 
+// Declare Cart component to display an empty or filled cart page
 function Cart(props) {
   function displayCart() {
     let subDiv;
@@ -18,10 +20,41 @@ function Cart(props) {
         </div>
       );
     } else if (props.cartItems > 0) {
-      subDiv = <div className="cart-filled">FILLED</div>;
+      subDiv = (
+        <div className="cart-filled">
+          <div className="cart-filled-title">SHOPPING CART</div>
+          <div className="cart-filled-items">{displayCartItems()}</div>
+          <div className="cart-filled-total">
+            <div className="cart-filled-total-text">TOTAL</div>
+            <div className="cart-filled-total-amount">### CAD</div>
+          </div>
+          <button className="enter-store checkout">GO TO CHECKOUT</button>
+        </div>
+      );
     }
     console.log(props.cart);
     return subDiv;
+  }
+
+  function displayCartItems() {
+    let cartItemsList = [];
+    for (let item of props.cart) {
+      const itemInfo = props.getItemInfoFromDataHandler(item.id);
+      const newCartItem = (
+        <CartItem
+          key={item.id}
+          id={item.id}
+          urlImage={itemInfo.urlImage}
+          name={itemInfo.name}
+          quantity={item.quantity}
+          price={itemInfo.price}
+          subtotal={item.quantity * itemInfo.price}
+        />
+      );
+      cartItemsList.push(newCartItem);
+    }
+
+    return cartItemsList;
   }
 
   return <div className="cart">{displayCart()}</div>;

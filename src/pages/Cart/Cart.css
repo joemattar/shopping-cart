@@ -1,9 +1,6 @@
 .cart {
-  background-color: aqua;
-
   display: grid;
   grid-template-columns: 1fr 5fr 1fr ;
-
 }
 
 .cart > div {
@@ -53,7 +50,7 @@
   height: 100px;
 }
 
-.cart-empty .enter-store {
+.enter-store {
   background-color: rgb(255, 255, 255, 0.75);
 
   border-color: #bd141b;
@@ -71,14 +68,62 @@
   width: 24.5rem;
 }
 
-.cart-empty .enter-store:hover {
+.enter-store:hover {
   background-color: rgb(255, 255, 255, 1);
 }
 
 .cart-filled {
-  background-color: palegreen;
+  color: #bd141b;
+
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr;
+  justify-content: center;
+  gap: 2rem;
+
+  font-family: Transformers;
+  font-size: 2rem;
+  font-weight: bold;
 
   grid-column: 2 / 3;
 
   margin: 2rem 0;
+}
+
+.cart-filled-title {
+  align-self: center;
+}
+
+.cart-filled-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cart-filled-total {
+  display: grid;
+  grid-template-columns: 1fr 6rem;
+
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-filled-total-text {
+  text-align: right;
+}
+
+.cart-filled-total-amount {
+  text-align: right;
+}
+
+.checkout {
+  align-self: center;
+  justify-self: center;
+
+  width: 18rem;
+}
+
+.checkout:hover {
+  background-color: #bd141b;
+  color: white;
 }

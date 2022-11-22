@@ -2,6 +2,7 @@ import "./Shop.css";
 import data from "../../assets/data";
 import ItemCard from "../../components/ItemCard/ItemCard";
 
+// Declare Shop component to display the shop page with all the item cards
 function Shop(props) {
   function displayItems() {
     const itemsInfoList = Object.values(data);
@@ -19,7 +20,7 @@ function Shop(props) {
           subgroup={item.subgroup}
           alliance={item.alliance}
           price={item.price}
-          addToCartHandler={props.addToCartHandler}
+          addToCartFromShopHandler={props.addToCartFromShopHandler}
         />
       );
       itemsCardList.push(newItemCard);
