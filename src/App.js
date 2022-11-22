@@ -58,16 +58,12 @@ function App() {
 
   // Method that calls the addToCartHandler method from cart
   function addToCartFromCartHandler(event) {
-    // TO REVIEW
-    // TO REVIEW
-    // TO REVIEW
     const targetID = Number(event.target.parentNode.getAttribute("id"));
     addToCartHandler(targetID);
   }
 
   // Method that handles the addition of an item to cart given the item id
   function addToCartHandler(targetID) {
-    console.log(targetID);
     let newCart;
     if (isItemInCart(targetID) === true) {
       newCart = cart.map((item) => {
@@ -93,10 +89,35 @@ function App() {
     setCartItems(cartItems + 1);
   }
 
-  // TO REVIEW
-  // TO REVIEW
-  // TO REVIEW
-  function removeFromCartHandler() {
+  // Method that calls the addToCartHandler method from cart
+  function removeFromCartFromCartHandler(event) {
+    const targetID = Number(event.target.parentNode.getAttribute("id"));
+    removeFromCartHandler(targetID);
+  }
+
+  // Method that handles the removal of an item to cart given the item id
+  function removeFromCartHandler(targetID) {
+    // Decrease quantity
+    let newCart = cart.map((item) => {
+      if (item.id === targetID) {
+        return {
+          ...item,
+          quantity: item.quantity - 1,
+        };
+      } else {
+        return item;
+      }
+    });
+
+    // Cart cleanup / removal of items having quantity = 0
+    newCart = newCart.filter((item) => {
+      if (item.quantity === 0) {
+        return false;
+      }
+      return true;
+    });
+
+    setCart(newCart);
     setCartItems(cartItems - 1);
   }
 
@@ -125,6 +146,7 @@ function App() {
                 cart={cart}
                 getItemInfoFromDataHandler={getItemInfoFromDataHandler}
                 addToCartFromCartHandler={addToCartFromCartHandler}
+                removeFromCartFromCartHandler={removeFromCartFromCartHandler}
               />
             }
           />

@@ -50,6 +50,7 @@ function Cart(props) {
           price={itemInfo.price}
           subtotal={item.quantity * itemInfo.price}
           addToCartFromCartHandler={props.addToCartFromCartHandler}
+          removeFromCartFromCartHandler={props.removeFromCartFromCartHandler}
         />
       );
       cartItemsList.push(newCartItem);
